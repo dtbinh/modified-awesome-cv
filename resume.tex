@@ -1,0 +1,126 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    justinshetty's note:
+%    I made quite a few modifications to the awesome-cv.cls
+%    that posquit0 gracefully provided on his github
+%    to make it more compatible with a one-page resume
+%    and to fit my specific resume needs
+
+%    BIG THANKS to posquit0 !
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper]{awesome-cv}
+\usepackage[none]{hyphenat} % Prevents hyphenation
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-skyblue}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\name{Justin}{Shetty}
+\address{Ann Arbor, MI, USA, Earth}
+\mobile{(+1) 201-359-0838} 
+
+\email{JusShe@UMich.edu}
+\homepage{justinshetty.com}
+\github{justinshetty}
+\linkedin{justinshetty}
+
+
+%\quote{``I would like to die on Mars, just not on impact." --- \textit{Elon Musk}	}
+\quote{``I would like to die on Mars, just not on impact."}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Justin Shetty~~~·~~~Résumé}
+  {\thepage}
+
+\begin{document}
+
+\makecvheader
+
+
+\import{\sectiondir}{education.tex}
+\import{\sectiondir}{experience.tex}
+\import{\sectiondir}{presentation.tex}
+
+\begin{minipage}[t]{.66\textwidth}
+\import{\sectiondir}{skills.tex}
+\end{minipage}
+\begin{minipage}[t]{.01\textwidth}
+\hfill %buffer minipage between columns
+\end{minipage}
+\begin{minipage}[t]{.33\textwidth}
+\import{\sectiondir}{leadership.tex}
+\end{minipage}
+
+
+\begin{minipage}[t]{.39\textwidth}
+\import{\sectiondir}{coursework.tex}
+\end{minipage}
+\begin{minipage}[t]{.01\textwidth}
+\hfill %buffer minipage between columns
+\end{minipage}
+\begin{minipage}[t]{.38\textwidth}
+\import{\sectiondir}{honors.tex}
+\end{minipage}
+\begin{minipage}[t]{.01\textwidth}
+\hfill %buffer minipage between columns
+\end{minipage}
+\begin{minipage}[t]{.20\textwidth}
+\import{\sectiondir}{interests.tex}
+\end{minipage}
+
+
+
+\end{document}
