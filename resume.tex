@@ -1,5 +1,4 @@
 %!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
 % Awesome CV LaTeX Template for CV/Resume
 %
 % This template has been downloaded from:
@@ -37,7 +36,12 @@
 %%% Override color
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{text}
+
+%\colorlet{awesome}{text}
+\colorlet{awesome}{awesome-skyblue}
+%\makeatletter
+%\def\@sectioncolor{\color{awesome}}
+%\makeatother
 % Define your custom color if you don't like awesome colors
 %\definecolor{awesome}{HTML}{CA63A8}
 %% Colors for text
@@ -65,7 +69,7 @@
 \address{Ann Arbor, MI, USA, Earth}
 \mobile{(+1) 201-359-0838} 
 
-\email{JusShe@UMich.edu}
+\email{jusshe@umich.edu}
 \homepage{justinshetty.com}
 \github{justinshetty}
 \linkedin{justinshetty}
@@ -80,13 +84,12 @@
 %%% Make a footer for CV with three arguments(<left>, <center>, <right>)
 %\makecvfooter
 %  {\today}
-%  {Justin Shetty~~~Â·~~~RÃ©sumÃ©}
+%  {Justin Shetty~~~·~~~Résumé}
 %  {\thepage}
 
 \begin{document}
 
 \makecvheader
-
 
 \import{\sectiondir}{education.tex}
 \import{\sectiondir}{experience.tex}
